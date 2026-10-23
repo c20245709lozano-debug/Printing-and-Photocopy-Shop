@@ -5,7 +5,7 @@
 
 ## About the Project
 
-KCL Printing and Photocopy Shop is a simple and responsive website for a local printing and photocopying business. It introduces the shop's services and provides contact information for students, teachers, workers, and local residents who need printing and photocopying services.
+KCL Printing and Photocopy Shop is a simple and responsive website for a local printing and photocopying business. It introduces the shop's services and provides information for students, teachers, workers, and local residents who need printing and photocopying services.
 
 ## Design System
 
@@ -21,16 +21,16 @@ KCL Printing and Photocopy Shop is a simple and responsive website for a local p
 
 **Style:** Soft Pastel Minimalism
 
-**Rationale:** I chose a soft pastel color palette to make the website look friendly, welcoming, and organized. The simple layout and clear blue headings help users read the content and navigate between the About, Services, and Contact sections easily.
+**Rationale:** I chose a soft pastel color palette to make the website look friendly, welcoming, and organized. The simple layout and blue headings help users read the content and navigate between the About, Services, and Contact sections easily. Dark mode also gives users an alternative viewing theme.
 
 ### Accessibility and Contrast
 
-- **Body text color:** `#1E293B`
-- **Main background color:** `#DCEBFA`
+- **Light-mode body text:** `#1E293B`
+- **Light-mode background:** `#DCEBFA`
 - **Contrast ratio:** To be verified
 - **Verification tool:** To be added after testing
 
-The website uses dark text against a light pastel background to help make the content readable.
+Dark mode uses dark backgrounds with light text. Contrast should be checked for both light and dark themes to ensure readable content.
 
 ## Features
 
@@ -46,9 +46,14 @@ The website uses dark text against a light pastel background to help make the co
 - [x] Contact form layout
 - [x] Footer with pastel yellow background
 
+### Completed in Commit 2
+
+- [x] Dark mode toggle
+- [x] Switch between light and dark themes
+- [x] Update the toggle button label and accessibility attributes
+
 ### Planned for Future Commits
 
-- [ ] Dark mode toggle
 - [ ] Page-load intro animation using a GSAP timeline
 - [ ] Staggered animation and overlapping timeline effects
 - [ ] Replay animation button
@@ -67,7 +72,6 @@ The website uses dark text against a light pastel background to help make the co
 
 ## Project Status
 
-**Current Stage:** Commit 1 — Basic Static Website
+**Current Stage:** Commit 2 — Dark Mode Toggle
 
-This version focuses on the website's structure, content, responsive layout, and pastel color scheme. Dark mode and animation features will be implemented incrementally in the next commits.
-
+This version includes the basic website and a working dark mode toggle. GSAP animations and scroll effects will be added incrementally in the next commits.
