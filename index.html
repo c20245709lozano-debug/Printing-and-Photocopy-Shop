@@ -7,42 +7,29 @@
     <title>KCL Printing and Photocopy Shop</title>
 
     <script>
-        tailwind = {};
-    </script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class'
+        tailwind = {
+            config: { darkMode: "class" }
         };
     </script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-[#DCEBFA] text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
 
-    <header class="bg-[#FFF0B8] dark:bg-slate-900 shadow-sm transition-colors duration-300">
+    <header class="bg-[#FFF0B8] dark:bg-slate-900 shadow-sm">
         <nav class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-5">
             <a href="#home" class="text-xl font-bold text-blue-700 dark:text-blue-300">
                 KCL Printing Shop
             </a>
 
             <div class="flex flex-wrap items-center gap-4">
-                <a href="#about" class="font-medium hover:text-blue-700 dark:hover:text-blue-300">
-                    About
-                </a>
-                <a href="#services" class="font-medium hover:text-blue-700 dark:hover:text-blue-300">
-                    Services
-                </a>
-                <a href="#contact" class="font-medium hover:text-blue-700 dark:hover:text-blue-300">
-                    Contact
-                </a>
+                <a href="#about" class="font-medium hover:text-blue-700 dark:hover:text-blue-300">About</a>
+                <a href="#services" class="font-medium hover:text-blue-700 dark:hover:text-blue-300">Services</a>
+                <a href="#contact" class="font-medium hover:text-blue-700 dark:hover:text-blue-300">Contact</a>
 
-                <button
-                    id="darkModeToggle"
-                    type="button"
+                <button id="darkModeToggle" type="button"
                     aria-label="Switch to dark mode"
-                    aria-pressed="false"
-                    class="rounded-full bg-white px-4 py-2 font-semibold text-slate-800 shadow-sm transition hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-slate-700 dark:text-white dark:hover:bg-slate-600"
-                >
+                    class="rounded-full bg-white px-4 py-2 font-semibold text-slate-800 shadow-sm dark:bg-slate-700 dark:text-white">
                     🌙 Dark Mode
                 </button>
             </div>
@@ -50,41 +37,44 @@
     </header>
 
     <main>
-        <section id="home" class="bg-[#DCEBFA] dark:bg-slate-950 transition-colors duration-300">
+        <!-- Hero Section -->
+        <section id="home" class="bg-[#DCEBFA] dark:bg-slate-950">
             <div class="mx-auto grid max-w-6xl items-center gap-10 px-6 py-20 md:grid-cols-2 md:py-28">
                 <div>
-                    <p class="mb-3 font-semibold uppercase tracking-widest text-blue-700 dark:text-blue-300">
+                    <p id="introLabel" class="mb-3 font-semibold uppercase tracking-widest text-blue-700 dark:text-blue-300">
                         KCL Printing and Photocopy Shop
                     </p>
 
-                    <h1 class="mb-6 text-4xl font-extrabold leading-tight text-blue-700 dark:text-blue-300 md:text-6xl">
+                    <h1 id="introTitle" class="mb-6 text-4xl font-extrabold leading-tight text-blue-700 dark:text-blue-300 md:text-6xl">
                         Printing made simple.
                     </h1>
 
-                    <p class="mb-8 max-w-xl text-lg leading-relaxed text-slate-700 dark:text-slate-300">
+                    <p id="introText" class="mb-8 max-w-xl text-lg leading-relaxed text-slate-700 dark:text-slate-300">
                         Your friendly neighborhood shop for printing, photocopying,
                         and school materials. We help make your everyday printing
                         needs easier.
                     </p>
 
-                    <div class="flex flex-wrap gap-4">
-                        <a
-                            href="#services"
-                            class="rounded-full bg-[#FFF0B8] px-6 py-3 font-bold text-slate-800 shadow-sm transition hover:brightness-95"
-                        >
+                    <!-- Hero buttons -->
+                    <div id="introButtons" class="flex flex-wrap gap-4">
+                        <a href="#services"
+                            class="hero-button rounded-full bg-[#FFF0B8] px-6 py-3 font-bold text-slate-800 shadow-sm hover:brightness-95">
                             Explore Services
                         </a>
 
-                        <a
-                            href="#contact"
-                            class="rounded-full border-2 border-blue-700 px-6 py-3 font-bold text-blue-700 transition hover:bg-blue-700 hover:text-white dark:border-blue-300 dark:text-blue-300 dark:hover:bg-blue-300 dark:hover:text-slate-950"
-                        >
+                        <a href="#contact"
+                            class="hero-button rounded-full border-2 border-blue-700 px-6 py-3 font-bold text-blue-700 hover:bg-blue-700 hover:text-white dark:border-blue-300 dark:text-blue-300">
                             Contact Us
                         </a>
                     </div>
+
+                    <button id="replayBtn" type="button"
+                        class="mt-6 rounded-full border border-blue-700 px-5 py-2 font-semibold text-blue-700 hover:bg-blue-700 hover:text-white dark:border-blue-300 dark:text-blue-300">
+                        ↻ Replay Intro
+                    </button>
                 </div>
 
-                <div class="rounded-3xl bg-[#F8DDE8] p-8 shadow-sm dark:bg-slate-800 md:p-12">
+                <div id="introCard" class="rounded-3xl bg-[#F8DDE8] p-8 shadow-sm dark:bg-slate-800 md:p-12">
                     <div class="rounded-2xl bg-white p-8 text-center dark:bg-slate-700">
                         <div class="mb-4 text-6xl" aria-hidden="true">🖨️</div>
                         <h2 class="mb-3 text-2xl font-bold text-blue-700 dark:text-blue-300">
@@ -99,99 +89,82 @@
             </div>
         </section>
 
-        <section id="about" class="bg-white dark:bg-slate-900 transition-colors duration-300">
+        <!-- About Section -->
+        <section id="about" class="reveal bg-white dark:bg-slate-900">
             <div class="mx-auto max-w-6xl px-6 py-16 md:py-20">
                 <div class="max-w-3xl">
                     <p class="mb-2 font-semibold uppercase tracking-widest text-blue-700 dark:text-blue-300">
                         Get to Know Us
                     </p>
-
                     <h2 class="mb-6 text-3xl font-bold text-blue-700 dark:text-blue-300 md:text-4xl">
                         About KCL
                     </h2>
-
                     <p class="text-lg leading-relaxed text-slate-700 dark:text-slate-300">
-                        KCL Printing and Photocopy Shop provides convenient
-                        printing and photocopying services for students,
-                        teachers, workers, and local residents. Our goal is
-                        to make everyday document needs easier through a
-                        friendly and approachable service.
+                        KCL Printing and Photocopy Shop provides convenient printing
+                        and photocopying services for students, teachers, workers,
+                        and local residents. Our goal is to make everyday document
+                        needs easier through friendly and approachable service.
                     </p>
                 </div>
             </div>
         </section>
 
-        <section id="services" class="bg-[#F8DDE8] dark:bg-slate-800 transition-colors duration-300">
+        <!-- Services Section -->
+        <section id="services" class="reveal bg-[#F8DDE8] dark:bg-slate-800">
             <div class="mx-auto max-w-6xl px-6 py-16 md:py-20">
                 <div class="mb-10 text-center">
                     <p class="mb-2 font-semibold uppercase tracking-widest text-blue-700 dark:text-blue-300">
                         What We Offer
                     </p>
-
                     <h2 class="text-3xl font-bold text-blue-700 dark:text-blue-300 md:text-4xl">
                         Our Services
                     </h2>
-
-                    <p class="mx-auto mt-4 max-w-2xl leading-relaxed text-slate-700 dark:text-slate-200">
-                        Explore our basic services for school, work, and
-                        everyday document needs.
+                    <p class="mx-auto mt-4 max-w-2xl text-slate-700 dark:text-slate-200">
+                        Explore our services for school, work, and everyday document needs.
                     </p>
                 </div>
 
                 <div class="grid gap-6 md:grid-cols-3">
-                    <article class="rounded-2xl bg-white p-7 shadow-sm transition hover:-translate-y-1 dark:bg-slate-900">
+                    <article class="rounded-2xl bg-white p-7 shadow-sm dark:bg-slate-900">
                         <div class="mb-4 text-4xl" aria-hidden="true"></div>
-                        <h3 class="mb-3 text-xl font-bold text-blue-700 dark:text-blue-300">
-                            Document Printing
-                        </h3>
+                        <h3 class="mb-3 text-xl font-bold text-blue-700 dark:text-blue-300">Document Printing</h3>
                         <p class="leading-relaxed text-slate-700 dark:text-slate-300">
-                            Print school requirements, assignments, forms,
-                            and other important documents.
+                            Print school requirements, assignments, forms, and other important documents.
                         </p>
                     </article>
 
-                    <article class="rounded-2xl bg-white p-7 shadow-sm transition hover:-translate-y-1 dark:bg-slate-900">
+                    <article class="rounded-2xl bg-white p-7 shadow-sm dark:bg-slate-900">
                         <div class="mb-4 text-4xl" aria-hidden="true"></div>
-                        <h3 class="mb-3 text-xl font-bold text-blue-700 dark:text-blue-300">
-                            Photocopying
-                        </h3>
+                        <h3 class="mb-3 text-xl font-bold text-blue-700 dark:text-blue-300">Photocopying</h3>
                         <p class="leading-relaxed text-slate-700 dark:text-slate-300">
-                            Make copies of notes, handouts, forms, and
-                            other documents.
+                            Make copies of notes, handouts, forms, and other documents.
                         </p>
                     </article>
 
-                    <article class="rounded-2xl bg-white p-7 shadow-sm transition hover:-translate-y-1 dark:bg-slate-900">
+                    <article class="rounded-2xl bg-white p-7 shadow-sm dark:bg-slate-900">
                         <div class="mb-4 text-4xl" aria-hidden="true"></div>
-                        <h3 class="mb-3 text-xl font-bold text-blue-700 dark:text-blue-300">
-                            School Materials
-                        </h3>
+                        <h3 class="mb-3 text-xl font-bold text-blue-700 dark:text-blue-300">School Materials</h3>
                         <p class="leading-relaxed text-slate-700 dark:text-slate-300">
-                            Get help with everyday school document and
-                            printing needs.
+                            Get help with everyday school document and printing needs.
                         </p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="bg-[#DCEBFA] dark:bg-slate-950 transition-colors duration-300">
+        <section id="contact" class="reveal bg-[#DCEBFA] dark:bg-slate-950">
             <div class="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:grid-cols-2 md:py-20">
                 <div>
                     <p class="mb-2 font-semibold uppercase tracking-widest text-blue-700 dark:text-blue-300">
                         Get in Touch
                     </p>
-
                     <h2 class="mb-5 text-3xl font-bold text-blue-700 dark:text-blue-300 md:text-4xl">
                         Contact Us
                     </h2>
-
                     <p class="mb-6 leading-relaxed text-slate-700 dark:text-slate-300">
-                        Have a question about our services? Use the form to
-                        prepare your message. This demonstration form does not
-                        send messages yet.
+                        Have a question about our services? This demonstration
+                        form does not send messages yet.
                     </p>
-
                     <div class="rounded-2xl bg-[#FFF0B8] p-6 dark:bg-slate-800">
                         <h3 class="mb-2 font-bold text-slate-800 dark:text-slate-100">
                             KCL Printing and Photocopy Shop
@@ -204,48 +177,25 @@
 
                 <form class="rounded-2xl bg-white p-7 shadow-sm dark:bg-slate-900 md:p-8">
                     <div class="mb-5">
-                        <label for="name" class="mb-2 block font-semibold">
-                            Your Name
-                        </label>
-                        <input
-                            id="name"
-                            name="name"
-                            type="text"
-                            placeholder="Enter your name"
-                            class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none focus:ring-2 focus:ring-blue-500 dark:border-slate-600 dark:bg-slate-800 dark:text-white"
-                        >
+                        <label for="name" class="mb-2 block font-semibold">Your Name</label>
+                        <input id="name" name="name" type="text" placeholder="Enter your name"
+                            class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900 dark:border-slate-600 dark:bg-slate-800 dark:text-white">
                     </div>
 
                     <div class="mb-5">
-                        <label for="email" class="mb-2 block font-semibold">
-                            Email Address
-                        </label>
-                        <input
-                            id="email"
-                            name="email"
-                            type="email"
-                            placeholder="Enter your email"
-                            class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none focus:ring-2 focus:ring-blue-500 dark:border-slate-600 dark:bg-slate-800 dark:text-white"
-                        >
+                        <label for="email" class="mb-2 block font-semibold">Email Address</label>
+                        <input id="email" name="email" type="email" placeholder="Enter your email"
+                            class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900 dark:border-slate-600 dark:bg-slate-800 dark:text-white">
                     </div>
 
                     <div class="mb-6">
-                        <label for="message" class="mb-2 block font-semibold">
-                            Message
-                        </label>
-                        <textarea
-                            id="message"
-                            name="message"
-                            rows="4"
-                            placeholder="Write your message"
-                            class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none focus:ring-2 focus:ring-blue-500 dark:border-slate-600 dark:bg-slate-800 dark:text-white"
-                        ></textarea>
+                        <label for="message" class="mb-2 block font-semibold">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Write your message"
+                            class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900 dark:border-slate-600 dark:bg-slate-800 dark:text-white"></textarea>
                     </div>
 
-                    <button
-                        type="button"
-                        class="w-full rounded-full bg-[#FFF0B8] px-6 py-3 font-bold text-slate-800 transition hover:brightness-95"
-                    >
+                    <button type="button"
+                        class="w-full rounded-full bg-[#FFF0B8] px-6 py-3 font-bold text-slate-800 hover:brightness-95">
                         Send Message
                     </button>
                 </form>
@@ -253,15 +203,15 @@
         </section>
     </main>
 
-    <footer class="bg-[#FFF0B8] text-center text-slate-800 transition-colors duration-300 dark:bg-slate-900 dark:text-slate-200">
+    <footer class="bg-[#FFF0B8] text-center text-slate-800 dark:bg-slate-900 dark:text-slate-200">
         <div class="mx-auto max-w-6xl px-6 py-6">
             <p class="font-semibold">KCL Printing and Photocopy Shop</p>
-            <p class="mt-2 text-sm">
-                © 2026 KCL Printing Shop. All rights reserved.
-            </p>
+            <p class="mt-2 text-sm">© 2026 KCL Printing Shop. All rights reserved.</p>
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

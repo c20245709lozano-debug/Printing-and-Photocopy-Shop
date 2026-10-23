@@ -21,7 +21,7 @@ KCL Printing and Photocopy Shop is a simple and responsive website for a local p
 
 **Style:** Soft Pastel Minimalism
 
-**Rationale:** I chose a soft pastel color palette to make the website look friendly, welcoming, and organized. The simple layout and blue headings help users read the content and navigate between the About, Services, and Contact sections easily. Dark mode also gives users an alternative viewing theme.
+**Rationale:** I chose a soft pastel color palette to make the website look friendly, welcoming, and organized. The simple layout and blue headings help users navigate the About, Services, and Contact sections. Dark mode gives users another viewing option, while GSAP animations make the website more interactive.
 
 ### Accessibility and Contrast
 
@@ -30,11 +30,11 @@ KCL Printing and Photocopy Shop is a simple and responsive website for a local p
 - **Contrast ratio:** To be verified
 - **Verification tool:** To be added after testing
 
-Dark mode uses dark backgrounds with light text. Contrast should be checked for both light and dark themes to ensure readable content.
+Dark mode uses dark backgrounds with light text. Both themes should be checked to ensure that text remains readable.
 
 ## Features
 
-### Completed in Commit 1
+### Commit 1 — Basic Static Website
 
 - [x] Basic HTML page structure
 - [x] Tailwind CSS styling
@@ -42,25 +42,31 @@ Dark mode uses dark backgrounds with light text. Contrast should be checked for 
 - [x] Header and navigation links
 - [x] Hero section
 - [x] About section
-- [x] Printing and photocopying services section
+- [x] Printing and photocopying services
 - [x] Contact form layout
 - [x] Footer with pastel yellow background
 
-### Completed in Commit 2
+### Commit 2 — Dark Mode
 
 - [x] Dark mode toggle
 - [x] Switch between light and dark themes
-- [x] Update the toggle button label and accessibility attributes
 
-### Planned for Future Commits
+### Commit 3 — GSAP Animations
 
-- [ ] Page-load intro animation using a GSAP timeline
-- [ ] Staggered animation and overlapping timeline effects
-- [ ] Replay animation button
-- [ ] Scroll reveal animations using ScrollTrigger
+- [x] GSAP intro animation timeline
+- [x] Timeline defaults for duration and easing
+- [x] Staggered hero button animation
+- [x] Overlapping timeline animations
+- [x] Replay intro animation button
+- [x] Scroll reveal animations using ScrollTrigger
+- [x] Individual ScrollTrigger for every `.reveal` section
+
+### Commit 4 — Planned Features
+
 - [ ] Scroll progress bar using scrub
-- [ ] Reduced-motion accessibility support
+- [ ] Reduced-motion support using `gsap.matchMedia()`
 - [ ] Final animation cleanup and testing
+- [ ] Verify text contrast ratio is at least 4.5:1
 
 ## Built With
 
@@ -68,10 +74,10 @@ Dark mode uses dark backgrounds with light text. Contrast should be checked for 
 - Tailwind CSS
 - JavaScript
 - GSAP
-- GSAP ScrollTrigger
+- ScrollTrigger
 
 ## Project Status
 
-**Current Stage:** Commit 2 — Dark Mode Toggle
+**Current Stage:** Commit 3 — GSAP Animations
 
-This version includes the basic website and a working dark mode toggle. GSAP animations and scroll effects will be added incrementally in the next commits.
+This version includes the basic website, dark mode, an animated hero section with a replay button, and scroll reveal animations. Scroll progress, reduced-motion support, and final cleanup will be completed in Commit 4.
